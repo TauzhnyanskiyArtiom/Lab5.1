@@ -9,13 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val currentOrientation = resources.configuration.orientation
-        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT) {
-            //вертикальная ориентация
-            setContentView(R.layout.activity_main)
-        }
-        else {
-            //горизонтальная ориентация
-            setContentView(R.layout.activity_main_horizontal)
-        }
+
+        if (currentOrientation == Configuration.ORIENTATION_PORTRAIT)
+            setContentView(R.layout.activity_main_ver)
+        else
+            setContentView(R.layout.activity_main_hor)
     }
 }
